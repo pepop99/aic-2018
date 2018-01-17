@@ -135,6 +135,9 @@ function problemClick(){
 	}, 500);	
 }
 
+function registerClick(){
+	document.getElementsByClassName("register")[0].style.top = "0vh";
+}
 
 document.getElementsByClassName("nav-rules")[0].addEventListener("click", rulesClick);
 document.getElementsByClassName("nav-contact")[0].addEventListener("click", contactClick);
@@ -142,6 +145,7 @@ document.getElementsByClassName("nav-overview")[0].addEventListener("click", ove
 document.getElementsByClassName("nav-home")[0].addEventListener("click", homeClick);
 document.getElementsByClassName("nav-faq")[0].addEventListener("click", faqClick);
 document.getElementsByClassName("problems")[0].addEventListener("click", problemClick);
+document.getElementsByClassName("register-button")[0].addEventListener("click", registerClick);
 
 document.getElementsByClassName("ham-rules")[0].addEventListener("click", function(){rulesClick(); hamClose();});
 document.getElementsByClassName("ham-contact")[0].addEventListener("click", function(){contactClick(); hamClose();});
