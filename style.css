@@ -64,7 +64,7 @@ body{
 }
 
 .title{
-	margin:5vh 0 0 2vh;
+	/*margin:5vh 0 0 2vh;*/
 	font-family: 'bebas';
 	font-size:13vh;
 	color:#ffffff;
@@ -72,13 +72,13 @@ body{
 }
 
 .rules-body .title{
-	margin:5vh 0 0 0;
+	/*margin:5vh 0 0 0;*/
 	font-size: 8vh;
 	text-align: center;
 }
 
 .contact-body .title{
-	margin:5vh 0 0 0;
+	/*margin:5vh 0 0 0;*/
 	font-size: 8vh;
 	text-align: center;
 }
@@ -169,7 +169,7 @@ body{
 @media all and (min-width:800px){
 	
 	.nav{
-		width:90vw;
+		width:100vw;
 	}
 
 	.logo{
@@ -211,7 +211,7 @@ body{
 	}
 
 	.title{
-		margin:10vh 0 0 10vh;
+		margin:10vh 0 0 0vh;
 		font-family: 'bebas';
 		font-size:14vh;
 		color:#ffffff;
