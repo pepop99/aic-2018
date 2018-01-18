@@ -376,7 +376,7 @@ body{
 }
 
 input[type=text], select{
-  width: 30vw;
+  width: 60vw;
   padding: 1vh;
   background: #aaa0f9;
   border: 1px solid white;
@@ -606,5 +606,12 @@ input[type=submit] {
   	margin-top: 6px;
  	position: relative;
   	left: 12vw;
+}
+
+input[type=text], select{
+  width: 30vw;
+  padding: 1vh;
+  background: #aaa0f9;
+  border: 1px solid white;
 }
 }

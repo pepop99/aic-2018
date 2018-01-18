@@ -151,9 +151,13 @@ function registerClose(){
 	}
 }
 
+var membercount=0;
 function addMember(){
+	membercount++;
 	var info = document.getElementsByClassName("member-info")[0];
 	var member = document.createElement("div");
+	var name = document.createElement("div");
+	var nameinput = document.createElement("INPUT");
 	var phone = document.createElement("div");
 	var phoneinput = document.createElement("INPUT");
 	var email = document.createElement("div");
@@ -162,7 +166,9 @@ function addMember(){
 	var collegeinput = document.createElement("INPUT");
 	var yos = document.createElement("div");
 	var yosinput = document.createElement("INPUT");
-	member.innerHTML="Member";
+	member.innerHTML="- Member " + membercount;
+	name.innerHTML="Name";
+	nameinput.setAttribute("type", "text");
 	phone.innerHTML="Phone";
 	phoneinput.setAttribute("type", "text");
 	email.innerHTML="E-mail";
@@ -172,6 +178,8 @@ function addMember(){
 	yos.innerHTML="Year of Study";
 	yosinput.setAttribute("type", "text");
 	member.classList.add("member-font");
+	name.classList.add("col-text");
+	nameinput.classList.add("col-input");
 	phone.classList.add("col-text");
 	phoneinput.classList.add("col-input");
 	email.classList.add("col-text");
@@ -180,8 +188,9 @@ function addMember(){
 	collegeinput.classList.add("col-input");
 	yos.classList.add("col-text");
 	yosinput.classList.add("col-input");
-	// yosinput.style.width="60vw";
 	info.appendChild(member);
+	info.appendChild(name);
+	info.appendChild(nameinput);
 	info.appendChild(phone);
 	info.appendChild(phoneinput);
 	info.appendChild(email);
