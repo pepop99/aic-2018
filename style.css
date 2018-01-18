@@ -260,15 +260,16 @@ body{
 
 .register-close{
 	position: absolute;
-	right: 0;
-	top: 1vh;
+	right: 1vw;
+	top: 2vh;
+	cursor: pointer;
 }
 
 .column{
 	display: flex;
 }
 .col-text {
-  width: 30vw;
+  width: 60vw;
   margin-top: 6px;
   position: relative;
   margin-top: 2vh;
@@ -276,7 +277,7 @@ body{
 }
 
 .col-input {
-  width: 30vw;
+  width: 60vw;
   margin-top: 6px;
   position: relative;
   left: 12vw;
@@ -452,4 +453,19 @@ input[type=submit] {
 		top: 34vh; 
 		left: 56vw;
 	}
+
+	.col-text {
+  	width: 30vw;
+  	margin-top: 6px;
+  	position: relative;
+  	margin-top: 2vh;
+  	left: 12vw;
+}
+
+	.col-input {
+  	width: 30vw;
+  	margin-top: 6px;
+ 	position: relative;
+  	left: 12vw;
+}
 }
