@@ -268,7 +268,7 @@ body{
 	display: flex;
 }
 .col-text {
-  width: 25%;
+  width: 30vw;
   margin-top: 6px;
   position: relative;
   margin-top: 2vh;
@@ -276,10 +276,15 @@ body{
 }
 
 .col-input {
-  width: 25%;
+  width: 30vw;
   margin-top: 6px;
   position: relative;
   left: 12vw;
+}
+
+.extras{
+	position: relative; 
+	left: 12vw;
 }
 
 input[type=text], select{
@@ -440,5 +445,11 @@ input[type=submit] {
 
 	.hamburger{
 		display:none;
+	}
+
+	.extras{
+		position: absolute; 
+		top: 34vh; 
+		left: 56vw;
 	}
 }
