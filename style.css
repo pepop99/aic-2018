@@ -274,6 +274,9 @@ body{
   position: relative;
   margin-top: 2vh;
   left: 12vw;
+  color: white; 
+  font-size: 2vh; 
+  font-family: sans-serif;
 }
 
 .col-input {
@@ -286,6 +289,20 @@ body{
 .extras{
 	position: relative; 
 	left: 12vw;
+}
+
+.addMember{
+	position: relative;
+	left: 26.5vw;
+}
+
+.member-font{
+	font-size: 3vh; 
+	color: white; 
+	position: relative; 
+	left: 10vw; 
+	margin-top: 2vh;  
+	font-family: sans-serif;
 }
 
 input[type=text], select{

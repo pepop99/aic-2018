@@ -148,6 +148,49 @@ function registerClose(){
 		c=0;
 	}
 }
+
+function addMember(){
+	var info = document.getElementsByClassName("member-info")[0];
+	var member = document.createElement("div");
+	var phone = document.createElement("div");
+	var phoneinput = document.createElement("INPUT");
+	var email = document.createElement("div");
+	var emailinput = document.createElement("INPUT")
+	var college = document.createElement("div");
+	var collegeinput = document.createElement("INPUT");
+	var yos = document.createElement("div");
+	var yosinput = document.createElement("INPUT");
+	member.innerHTML="Member";
+	phone.innerHTML="Phone";
+	phoneinput.setAttribute("type", "text");
+	email.innerHTML="E-mail";
+	emailinput.setAttribute("type", "text");
+	college.innerHTML="College";
+	collegeinput.setAttribute("type", "text");
+	yos.innerHTML="Year of Study";
+	yosinput.setAttribute("type", "text");
+	member.classList.add("member-font");
+	phone.classList.add("col-text");
+	phoneinput.classList.add("col-input");
+	email.classList.add("col-text");
+	emailinput.classList.add("col-input");
+	college.classList.add("col-text");
+	collegeinput.classList.add("col-input");
+	yos.classList.add("col-text");
+	yosinput.classList.add("col-input");
+	// yosinput.style.width="60vw";
+	info.appendChild(member);
+	info.appendChild(phone);
+	info.appendChild(phoneinput);
+	info.appendChild(email);
+	info.appendChild(emailinput);
+	info.appendChild(college);
+	info.appendChild(collegeinput);
+	info.appendChild(yos);
+	info.appendChild(yosinput);
+
+}
+
 document.getElementsByClassName("nav-rules")[0].addEventListener("click", rulesClick);
 document.getElementsByClassName("nav-contact")[0].addEventListener("click", contactClick);
 document.getElementsByClassName("nav-overview")[0].addEventListener("click", overviewClick);
@@ -156,6 +199,7 @@ document.getElementsByClassName("nav-faq")[0].addEventListener("click", faqClick
 document.getElementsByClassName("problems")[0].addEventListener("click", problemClick);
 document.getElementsByClassName("register-button")[0].addEventListener("click", registerClick);
 document.getElementsByClassName("register-close")[0].addEventListener("click", registerClose);
+document.getElementsByClassName("addMember")[0].addEventListener("click", addMember);
 
 document.getElementsByClassName("ham-rules")[0].addEventListener("click", function(){rulesClick(); hamClose();});
 document.getElementsByClassName("ham-contact")[0].addEventListener("click", function(){contactClick(); hamClose();});
