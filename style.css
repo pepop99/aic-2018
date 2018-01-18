@@ -18,10 +18,10 @@ body{
 	display:none;
 }
 
-@font-face{
+/*@font-face{
 	font-family: 'tccm';
 	src:url('fonts/TCCM____.TTF') format('truetype');
-}
+}*/
 
 @font-face{
 	font-family: 'bebas';
@@ -48,9 +48,9 @@ body{
 }
 
 .menu{
-	height:80%;
+	height:70%;
 	float:left;
-	padding:1vh;
+	margin:2vh 0 0 5vw;
 }
 
 .menu img{
@@ -75,11 +75,11 @@ body{
 	text-align: center;
 }
 
-.problem-heading{
+/*.problem-heading{
 	font-family:'bebas';
 	color:#ffffff;
 	font-size: 5vh;
-}
+}*/
 
 .c2, .c3, .c4, .c5, .c6, .c7, .c8{
 	opacity:0;
@@ -100,7 +100,7 @@ body{
 }
 
 .company-name{
-	font-family:'tccm';
+	font-family:'bebas';
 	color:#ffffff;
 	text-align: left;
 	margin:1vh 0 0 5vw;
@@ -114,7 +114,7 @@ body{
 	font-size: 3vh;
 	border-radius:2vw;
 	text-align: center;
-	font-family: 'tccm';
+	font-family: 'bebas';
 	background: #ffffff;
 	color:#867cf4;
 	font-weight: bold;
@@ -128,7 +128,7 @@ body{
 	width:55vw;
 	margin:1vh 0 0 13vw;
 	font-size: 3vh;
-	font-family: 'tccm';
+	font-family: 'bebas';
 	color:#ffffff;
 	text-align: left;
 }
@@ -167,23 +167,29 @@ body{
 	transform: rotateZ(90deg);
 }
 
+.up-arrow:hover, .down-arrow:hover{
+	cursor:pointer;
+}
+
 .title{
-	margin:5vh 0 0 2vh;
+	margin:5vh 0 0 5vh;
 	font-family: 'bebas';
 	font-size:10vh;
 	color:#ffffff;
+	line-height: 10vh;
 	/*text-align: center;*/
 }
 
 .register-button{
-	margin:0 0 0 2vh;
+	margin:6vh 0 0 5vh;
 	font-family: 'bebas';
 	font-size:7vh;
 	width:40vw;
 	text-align: center;
-	border-radius: 2vw;
+	border-radius: 7vw;
 	color:#867cf4;
 	background: #ffffff;
+	padding:0 2vw 0 2vw;
 }
 
 .register-button:hover{
@@ -191,9 +197,9 @@ body{
 }
 
 .bodies .title{
-	margin:0 0 0 15vw;
+	margin:0 0 0 0;
 	font-size: 8vh;
-	/*text-align: center;*/
+	text-align: center;
 }
 
 /*.contact-body .title{
@@ -203,11 +209,11 @@ body{
 }*/
 
 .content{
-	margin:2vh 5vh 0 20vw;
+	margin:0vh 5vw 0 5vw;
 	font-family: 'bebas';
 	font-size:5vh;
 	color:#ffffff;
-	/*text-align: center;*/
+	text-align: center;
 }
 
 
@@ -219,42 +225,6 @@ body{
 	width:100vw;
 	transition:left 0.3s linear;
 }
-
-/*.overview-body{
-	position:absolute;
-	top:15vh;
-	left:100vw;
-	height:55vh;
-	width:100vw;
-	transition:left 0.3s linear;
-}
-
-.register-body{
-	position:absolute;
-	top:15vh;
-	left:100vw;
-	height:55vh;
-	width:100vw;
-	transition:left 0.3s linear;
-}
-
-.contact-body{
-	position:absolute;
-	top:15vh;
-	left:100vw;
-	height:55vh;
-	width:100vw;
-	transition:left 0.3s linear;
-}
-
-.company-body{
-	position:absolute;
-	top:15vh;
-	left:0vw;
-	height:55vh;
-	width:100vw;
-	transition:left 0.3s linear;
-}*/
 
 .big-arrow{
 	display:none;
@@ -293,8 +263,8 @@ body{
 
 .arrow{
 	float:left;
-	height:80%;
-	padding:2vh 0 0 17vw;
+	height:70%;
+	padding:3vh 0 0 17vw;
 }
 
 .arrow img{
@@ -302,7 +272,7 @@ body{
 }
 
 .ham-body{
-	font-family:'tccm';
+	font-family:'bebas';
 	margin-left:17vw;
 }
 
@@ -392,47 +362,6 @@ input[type=submit] {
 }
 
 
-/*@keyframes expand{
->>>>>>> Stashed changes
-	0%{
-		transform-origin: left;
-		transform: scaleX(0);
-	}
-
-	100%{
-		transform-origin: left;
-		transform: scaleX(1);
-	}
-}
-
-@keyframes shrink{
-	0%{
-		transform-origin: right;
-		transform: scaleX(1);
-	}
-
-	
-	100%{
-		transform-origin: right;
-		transform:scaleX(0);
-		background-position: 100px;
-		opacity: 0;
-	}
-}
-
-
-@keyframes fade{
-	0%{
-		opacity:1;
-	}
-
-	100%{
-		opacity:0;
-	}
-}*/
-
-
-
 @media all and (min-width:800px){
 	
 	.nav{
@@ -477,11 +406,11 @@ input[type=submit] {
 		width:100vw;
 	}
 	
-	.problem-heading{
+	/*.problem-heading{
 		text-align: left;
 		font-size: 10vh;
 		margin:0 0 0 20vw;
-	}
+	}*/
 
 	.company-info{
 		height: 55vh;
@@ -489,7 +418,7 @@ input[type=submit] {
 		position: absolute;
 		top:11vh;
 		left:30vw;
-	    background-image: linear-gradient(19deg, rgb(214, 85, 110) 0%, rgb(31, 36, 161) 100%);
+	    background-image: linear-gradient(19deg, #0e19ec 0%, #e9aa8b);
 	}
 		
 	.company-name{
@@ -505,7 +434,7 @@ input[type=submit] {
 
 	.about{
 		width:26vw;
-		margin:2vh 0 0 6vw;
+		margin:2vh 0 10vh 6vw;
 	}
 
 	.company-logo{
@@ -540,17 +469,19 @@ input[type=submit] {
 	.title{
 		margin:10vh 0 0 10vw;
 		font-family: 'bebas';
-		font-size:14vh;
+		font-size:15vh;
 		color:#ffffff;
+		line-height: 14vh;
 	}
 
 	.register-button{
-		margin:0 0 0 10vw;
+		margin:8vh 0 0 10vw;
 		width:15vw;
 		font-family: 'bebas';
 		/*font-size:10vh;*/
 		color:#867cf4;
 		background: #ffffff;
+		border-radius:5vw;
 	}
 
 	.bot-nav{

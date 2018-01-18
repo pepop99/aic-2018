@@ -14,8 +14,8 @@ var botTop = document.getElementsByClassName("bot-nav")[0].getBoundingClientRect
 function rulesClick(){
 	document.getElementsByClassName("home-body")[0].style.left = "100vw";
 	document.getElementsByClassName("contact-body")[0].style.left = "100vw";
-	document.getElementsByClassName("faq-body")[0].style.left = "100vw";
-	document.getElementsByClassName("overview-body")[0].style.left = "100vw";
+	// document.getElementsByClassName("faq-body")[0].style.left = "100vw";
+	// document.getElementsByClassName("overview-body")[0].style.left = "100vw";
 	document.getElementsByClassName("problem-body")[0].style.left = "100vw";
 	
 	document.getElementsByClassName("bot-nav")[0].style.top = botTop+"px";
@@ -24,8 +24,8 @@ function rulesClick(){
 		document.getElementsByClassName("rules-body")[0].style.left = "0vw";
 		document.getElementsByClassName("home-body")[0].style.left = "100vw";
 		document.getElementsByClassName("contact-body")[0].style.left = "100vw";
-		document.getElementsByClassName("faq-body")[0].style.left = "100vw";
-		document.getElementsByClassName("overview-body")[0].style.left = "100vw";
+		// document.getElementsByClassName("faq-body")[0].style.left = "100vw";
+		// document.getElementsByClassName("overview-body")[0].style.left = "100vw";
 		document.getElementsByClassName("problem-body")[0].style.left = "100vw";
 
 		document.getElementsByClassName("bot-nav")[0].style.top = botTop+"px";
@@ -35,8 +35,8 @@ function rulesClick(){
 function contactClick(){
 	document.getElementsByClassName("home-body")[0].style.left = "100vw";
 	document.getElementsByClassName("rules-body")[0].style.left = "100vw";
-	document.getElementsByClassName("faq-body")[0].style.left = "100vw";
-	document.getElementsByClassName("overview-body")[0].style.left = "100vw";
+	// document.getElementsByClassName("faq-body")[0].style.left = "100vw";
+	// document.getElementsByClassName("overview-body")[0].style.left = "100vw";
 	document.getElementsByClassName("problem-body")[0].style.left = "100vw";
 	
 	document.getElementsByClassName("bot-nav")[0].style.top = botTop+"px";
@@ -45,40 +45,40 @@ function contactClick(){
 		document.getElementsByClassName("contact-body")[0].style.left = "0vw";
 		document.getElementsByClassName("home-body")[0].style.left = "100vw";
 		document.getElementsByClassName("rules-body")[0].style.left = "100vw";
-		document.getElementsByClassName("faq-body")[0].style.left = "100vw";
-		document.getElementsByClassName("overview-body")[0].style.left = "100vw";
+		// document.getElementsByClassName("faq-body")[0].style.left = "100vw";
+		// document.getElementsByClassName("overview-body")[0].style.left = "100vw";
 		document.getElementsByClassName("problem-body")[0].style.left = "100vw";
 
 		document.getElementsByClassName("bot-nav")[0].style.top = botTop+"px";
 	}, 500);	
 }
 
-function overviewClick(){
-	document.getElementsByClassName("home-body")[0].style.left = "100vw";
-	document.getElementsByClassName("rules-body")[0].style.left = "100vw";
-	document.getElementsByClassName("faq-body")[0].style.left = "100vw";
-	document.getElementsByClassName("contact-body")[0].style.left = "100vw";
-	document.getElementsByClassName("problem-body")[0].style.left = "100vw";
+// function overviewClick(){
+// 	document.getElementsByClassName("home-body")[0].style.left = "100vw";
+// 	document.getElementsByClassName("rules-body")[0].style.left = "100vw";
+	// document.getElementsByClassName("faq-body")[0].style.left = "100vw";
+// 	document.getElementsByClassName("contact-body")[0].style.left = "100vw";
+// 	document.getElementsByClassName("problem-body")[0].style.left = "100vw";
 	
-	document.getElementsByClassName("bot-nav")[0].style.top = botTop+"px";
+// 	document.getElementsByClassName("bot-nav")[0].style.top = botTop+"px";
 
-	setTimeout(function(){
-		document.getElementsByClassName("overview-body")[0].style.left = "0vw";
-		document.getElementsByClassName("home-body")[0].style.left = "100vw";
-		document.getElementsByClassName("rules-body")[0].style.left = "100vw";
-		document.getElementsByClassName("faq-body")[0].style.left = "100vw";
-		document.getElementsByClassName("contact-body")[0].style.left = "100vw";
-		document.getElementsByClassName("problem-body")[0].style.left = "100vw";
+// 	setTimeout(function(){
+// 		document.getElementsByClassName("overview-body")[0].style.left = "0vw";
+// 		document.getElementsByClassName("home-body")[0].style.left = "100vw";
+// 		document.getElementsByClassName("rules-body")[0].style.left = "100vw";
+		// document.getElementsByClassName("faq-body")[0].style.left = "100vw";
+// 		document.getElementsByClassName("contact-body")[0].style.left = "100vw";
+// 		document.getElementsByClassName("problem-body")[0].style.left = "100vw";
 
-		document.getElementsByClassName("bot-nav")[0].style.top = botTop+"px";
-	}, 500);	
-}
+// 		document.getElementsByClassName("bot-nav")[0].style.top = botTop+"px";
+// 	}, 500);	
+//}
 
 function homeClick(){
 	document.getElementsByClassName("contact-body")[0].style.left = "100vw";
 	document.getElementsByClassName("rules-body")[0].style.left = "100vw";
-	document.getElementsByClassName("faq-body")[0].style.left = "100vw";
-	document.getElementsByClassName("overview-body")[0].style.left = "100vw";
+	// document.getElementsByClassName("faq-body")[0].style.left = "100vw";
+	// document.getElementsByClassName("overview-body")[0].style.left = "100vw";
 	document.getElementsByClassName("problem-body")[0].style.left = "100vw";
 	
 	document.getElementsByClassName("bot-nav")[0].style.top = botTop+"px";
@@ -87,41 +87,41 @@ function homeClick(){
 		document.getElementsByClassName("home-body")[0].style.left = "0vw";
 		document.getElementsByClassName("contact-body")[0].style.left = "100vw";
 		document.getElementsByClassName("rules-body")[0].style.left = "100vw";
-		document.getElementsByClassName("faq-body")[0].style.left = "100vw";
-		document.getElementsByClassName("overview-body")[0].style.left = "100vw";
+		// document.getElementsByClassName("faq-body")[0].style.left = "100vw";
+		// document.getElementsByClassName("overview-body")[0].style.left = "100vw";
 		document.getElementsByClassName("problem-body")[0].style.left = "100vw";
 
 		document.getElementsByClassName("bot-nav")[0].style.top = botTop+"px";
 	}, 500);	
 }
 
-function faqClick(){
-	document.getElementsByClassName("contact-body")[0].style.left = "100vw";
-	document.getElementsByClassName("rules-body")[0].style.left = "100vw";
-	document.getElementsByClassName("home-body")[0].style.left = "100vw";
-	document.getElementsByClassName("overview-body")[0].style.left = "100vw";
-	document.getElementsByClassName("problem-body")[0].style.left = "100vw";
+// function faqClick(){
+// 	document.getElementsByClassName("contact-body")[0].style.left = "100vw";
+// 	document.getElementsByClassName("rules-body")[0].style.left = "100vw";
+// 	document.getElementsByClassName("home-body")[0].style.left = "100vw";
+	// document.getElementsByClassName("overview-body")[0].style.left = "100vw";
+// 	document.getElementsByClassName("problem-body")[0].style.left = "100vw";
 	
-	document.getElementsByClassName("bot-nav")[0].style.top = botTop+"px";
+// 	document.getElementsByClassName("bot-nav")[0].style.top = botTop+"px";
 
-	setTimeout(function(){
-		document.getElementsByClassName("faq-body")[0].style.left = "0vw";
-		document.getElementsByClassName("contact-body")[0].style.left = "100vw";
-		document.getElementsByClassName("rules-body")[0].style.left = "100vw";
-		document.getElementsByClassName("home-body")[0].style.left = "100vw";
-		document.getElementsByClassName("overview-body")[0].style.left = "100vw";
-		document.getElementsByClassName("problem-body")[0].style.left = "100vw";
+// 	setTimeout(function(){
+// 		document.getElementsByClassName("faq-body")[0].style.left = "0vw";
+// 		document.getElementsByClassName("contact-body")[0].style.left = "100vw";
+// 		document.getElementsByClassName("rules-body")[0].style.left = "100vw";
+// 		document.getElementsByClassName("home-body")[0].style.left = "100vw";
+		// document.getElementsByClassName("overview-body")[0].style.left = "100vw";
+// 		document.getElementsByClassName("problem-body")[0].style.left = "100vw";
 
-		document.getElementsByClassName("bot-nav")[0].style.top = botTop+"px";
-	}, 500);	
-}
+// 		document.getElementsByClassName("bot-nav")[0].style.top = botTop+"px";
+// 	}, 500);	
+// }
 
 function problemClick(){
 	document.getElementsByClassName("contact-body")[0].style.left = "100vw";
 	document.getElementsByClassName("rules-body")[0].style.left = "100vw";
 	document.getElementsByClassName("home-body")[0].style.left = "100vw";
-	document.getElementsByClassName("overview-body")[0].style.left = "100vw";
-	document.getElementsByClassName("faq-body")[0].style.left = "100vw";
+	// document.getElementsByClassName("overview-body")[0].style.left = "100vw";
+	// document.getElementsByClassName("faq-body")[0].style.left = "100vw";
 		
 	document.getElementsByClassName("bot-nav")[0].style.top = "100vh";
 
@@ -130,8 +130,8 @@ function problemClick(){
 		document.getElementsByClassName("contact-body")[0].style.left = "100vw";
 		document.getElementsByClassName("rules-body")[0].style.left = "100vw";
 		document.getElementsByClassName("home-body")[0].style.left = "100vw";
-		document.getElementsByClassName("overview-body")[0].style.left = "100vw";
-		document.getElementsByClassName("faq-body")[0].style.left = "100vw";
+		// document.getElementsByClassName("overview-body")[0].style.left = "100vw";
+		// document.getElementsByClassName("faq-body")[0].style.left = "100vw";
 
 		document.getElementsByClassName("bot-nav")[0].style.top = "100vh";
 	}, 500);	
@@ -204,9 +204,9 @@ function addMember(){
 
 document.getElementsByClassName("nav-rules")[0].addEventListener("click", rulesClick);
 document.getElementsByClassName("nav-contact")[0].addEventListener("click", contactClick);
-document.getElementsByClassName("nav-overview")[0].addEventListener("click", overviewClick);
+//document.getElementsByClassName("nav-overview")[0].addEventListener("click", overviewClick);
 document.getElementsByClassName("nav-home")[0].addEventListener("click", homeClick);
-document.getElementsByClassName("nav-faq")[0].addEventListener("click", faqClick);
+//document.getElementsByClassName("nav-faq")[0].addEventListener("click", faqClick);
 document.getElementsByClassName("problems")[0].addEventListener("click", problemClick);
 document.getElementsByClassName("register-button")[0].addEventListener("click", registerClick);
 document.getElementsByClassName("register-close")[0].addEventListener("click", registerClose);
@@ -214,9 +214,9 @@ document.getElementsByClassName("addMember")[0].addEventListener("click", addMem
 
 document.getElementsByClassName("ham-rules")[0].addEventListener("click", function(){rulesClick(); hamClose();});
 document.getElementsByClassName("ham-contact")[0].addEventListener("click", function(){contactClick(); hamClose();});
-document.getElementsByClassName("ham-overview")[0].addEventListener("click", function(){overviewClick(); hamClose();});
+//document.getElementsByClassName("ham-overview")[0].addEventListener("click", function(){overviewClick(); hamClose();});
 document.getElementsByClassName("ham-home")[0].addEventListener("click", function(){homeClick(); hamClose();});
-document.getElementsByClassName("ham-faq")[0].addEventListener("click", function(){faqClick(); hamClose();});
+//document.getElementsByClassName("ham-faq")[0].addEventListener("click", function(){faqClick(); hamClose();});
 
 
 var counter = 0;//company count
@@ -233,7 +233,6 @@ function nextCompany(){
 		wrapLeft = companyWrap[counter].getBoundingClientRect().left;
 		if(counter<7){
 			counter++;
-			console.log(counter);
 
 			companyInfo[counter-1].style.transition = "transform 0.5s, opacity 0.5s";
 			companyInfo[counter-1].style.transform = "translateX(5vw)";
@@ -244,16 +243,13 @@ function nextCompany(){
 			companyLogo[counter-1].style.opacity = "0";
 
 
-			//companyWrap[counter].style.display = "block";
 			companyWrap[counter].style.left = wrapLeft+"px";
 			companyWrap[counter].style.transition = "transform 0.5s 0.5s, opacity 0.5s 0.5s";
 			companyInfo[counter].style.transition = "transform 0.5s 0.5s, opacity 0.5s 0.5s";
-			//companyInfo[counter].style.transform = "translateX(-5vw)";
 			companyWrap[counter].style.opacity = "1";
 			companyInfo[counter].style.opacity = "1";
 
 			companyLogo[counter].style.transition = "transform 0.5s 0.5s, opacity 0.5s 0.5s";
-			//companyLogo[counter].style.transform = "translateX(-5vw)";
 			companyLogo[counter].style.opacity = "1";
 
 			setTimeout(function(){
@@ -266,7 +262,6 @@ function nextCompany(){
 		}
 		else if(counter==7){
 			counter = 0;
-			console.log(counter);
 
 			companyInfo[7].style.transition = "transform 0.5s, opacity 0.5s";
 			companyInfo[7].style.transform = "translateX(5vw)";
@@ -277,16 +272,13 @@ function nextCompany(){
 			companyLogo[7].style.opacity = "0";
 
 
-			//companyWrap[counter].style.display = "block";
 			companyWrap[counter].style.left = wrapLeft+"px";
 			companyWrap[counter].style.transition = "transform 0.5s 0.5s, opacity 0.5s 0.5s";
 			companyInfo[counter].style.transition = "transform 0.5s 0.5s, opacity 0.5s 0.5s";
-			//companyInfo[counter].style.transform = "translateX(-5vw)";
 			companyWrap[counter].style.opacity = "1";
 			companyInfo[counter].style.opacity = "1";
 
 			companyLogo[counter].style.transition = "transform 0.5s 0.5s, opacity 0.5s 0.5s";
-			//companyLogo[counter].style.transform = "translateX(-5vw)";
 			companyLogo[counter].style.opacity = "1";
 
 			setTimeout(function(){
@@ -310,7 +302,6 @@ function prevCompany(){
 		wrapLeft = companyWrap[counter].getBoundingClientRect().left;
 		if(counter>0){
 			counter--;
-			console.log(counter);
 
 			companyInfo[counter+1].style.transition = "transform 0.5s, opacity 0.5s";
 			companyInfo[counter+1].style.transform = "translateX(5vw)";
@@ -321,16 +312,13 @@ function prevCompany(){
 			companyLogo[counter+1].style.opacity = "0";
 
 
-			//companyWrap[counter].style.display = "block";
 			companyWrap[counter].style.left = wrapLeft+"px";
 			companyWrap[counter].style.transition = "transform 0.5s 0.5s, opacity 0.5s 0.5s";
 			companyInfo[counter].style.transition = "transform 0.5s 0.5s, opacity 0.5s 0.5s";
-			//companyInfo[counter].style.transform = "translateX(-5vw)";
 			companyWrap[counter].style.opacity = "1";
 			companyInfo[counter].style.opacity = "1";
 
 			companyLogo[counter].style.transition = "transform 0.5s 0.5s, opacity 0.5s 0.5s";
-			//companyLogo[counter].style.transform = "translateX(-5vw)";
 			companyLogo[counter].style.opacity = "1";
 
 			setTimeout(function(){
@@ -343,7 +331,6 @@ function prevCompany(){
 		}
 		else if(counter==0){
 			counter = 7;
-			console.log(counter);
 
 			companyInfo[0].style.transition = "transform 0.5s, opacity 0.5s";
 			companyInfo[0].style.transform = "translateX(5vw)";
@@ -354,16 +341,13 @@ function prevCompany(){
 			companyLogo[0].style.opacity = "0";
 
 
-			//companyWrap[counter].style.display = "block";
 			companyWrap[counter].style.left = wrapLeft+"px";
 			companyWrap[counter].style.transition = "transform 0.5s 0.5s, opacity 0.5s 0.5s";
 			companyInfo[counter].style.transition = "transform 0.5s 0.5s, opacity 0.5s 0.5s";
-			//companyInfo[counter].style.transform = "translateX(-5vw)";
 			companyWrap[counter].style.opacity = "1";
 			companyInfo[counter].style.opacity = "1";
 
 			companyLogo[counter].style.transition = "transform 0.5s 0.5s, opacity 0.5s 0.5s";
-			//companyLogo[counter].style.transform = "translateX(-5vw)";
 			companyLogo[counter].style.opacity = "1";
 
 			setTimeout(function(){
@@ -383,7 +367,7 @@ function prevCompany(){
 
 document.addEventListener("keydown", function(e){
 	var keyCode = e.keyCode || e.which,
-    arrow = {left: 37,right: 39};
+    arrow = {left:37, up: 38, right: 39,down: 40};
 
     switch(keyCode){
     	case arrow.right: nextCompany();
@@ -391,20 +375,22 @@ document.addEventListener("keydown", function(e){
 
     	case arrow.left: prevCompany();
     		break;
+
+    	case arrow.up: nextCompany();
+    		break;
+
+    	case arrow.down: prevCompany();
+    		break;
     }
 });
 
 document.getElementsByClassName("problem-body")[0].addEventListener("touchstart", function(e){
-        //e.preventDefault();
         window.scrollBy(0,100);
 		x1 = e.changedTouches[0].pageX;
 	}, false);
 
 document.getElementsByClassName("problem-body")[0].addEventListener("touchend", function(e){
     var delta = e.changedTouches[0].pageX - x1;
-
-    console.log(delta);
-
     //right
     if(delta > 0) prevCompany();
 
@@ -413,17 +399,40 @@ document.getElementsByClassName("problem-body")[0].addEventListener("touchend", 
 });
 
 document.getElementsByClassName("problem-body")[0].addEventListener("DOMMouseScroll", function(e){
-	//left
-    if(e.detail > 0) nextCompany();
+	console.log(e);
 
-    //right
-    else if(e.detail < 0) prevCompany();
+		if(e.target.classList.contains('company-info')) return false;
+
+		else{
+			//left
+		    if(e.detail > 0) nextCompany();
+
+		    //right
+		    else if(e.detail < 0) prevCompany();
+		}
 });
 
 document.getElementsByClassName("problem-body")[0].addEventListener("mousewheel", function(e){
-	//left
-    if(e.deltaY > 0) nextCompany();
+	var inInfo = 0;
+	for(i=0;i<e.path.length;i++){
+		if(e.path[i].classList){
+			if(e.path[i].classList.contains('company-info')){
+				inInfo = 1;
+				break;
+			}
+		}
+	}
 
-    //right
-    else if(e.deltaY < 0) prevCompany();
+	if(inInfo == 1) return false;
+
+	else{
+		//left
+	    if(e.deltaY > 0) nextCompany();
+
+	    //right
+	    else if(e.deltaY < 0) prevCompany();
+	}
 });
+
+document.getElementsByClassName("up-arrow")[0].addEventListener("click", nextCompany);
+document.getElementsByClassName("down-arrow")[0].addEventListener("click", prevCompany);
