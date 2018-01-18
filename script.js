@@ -9,6 +9,8 @@ function hamOpen(){
 document.getElementsByClassName("menu")[0].addEventListener("click", hamOpen);
 document.getElementsByClassName("arrow")[0].addEventListener("click", hamClose);
 
+var botTop = document.getElementsByClassName("bot-nav")[0].getBoundingClientRect().top;
+
 function rulesClick(){
 	document.getElementsByClassName("home-body")[0].style.left = "100vw";
 	document.getElementsByClassName("contact-body")[0].style.left = "100vw";
@@ -16,7 +18,7 @@ function rulesClick(){
 	document.getElementsByClassName("overview-body")[0].style.left = "100vw";
 	document.getElementsByClassName("problem-body")[0].style.left = "100vw";
 	
-	document.getElementsByClassName("bot-nav")[0].style.top = "78vh";
+	document.getElementsByClassName("bot-nav")[0].style.top = botTop+"px";
 
 	setTimeout(function(){
 		document.getElementsByClassName("rules-body")[0].style.left = "0vw";
@@ -26,7 +28,7 @@ function rulesClick(){
 		document.getElementsByClassName("overview-body")[0].style.left = "100vw";
 		document.getElementsByClassName("problem-body")[0].style.left = "100vw";
 
-		document.getElementsByClassName("bot-nav")[0].style.top = "78vh";
+		document.getElementsByClassName("bot-nav")[0].style.top = botTop+"px";
 	}, 500);	
 }
 
@@ -37,7 +39,7 @@ function contactClick(){
 	document.getElementsByClassName("overview-body")[0].style.left = "100vw";
 	document.getElementsByClassName("problem-body")[0].style.left = "100vw";
 	
-	document.getElementsByClassName("bot-nav")[0].style.top = "78vh";
+	document.getElementsByClassName("bot-nav")[0].style.top = botTop+"px";
 
 	setTimeout(function(){
 		document.getElementsByClassName("contact-body")[0].style.left = "0vw";
@@ -47,7 +49,7 @@ function contactClick(){
 		document.getElementsByClassName("overview-body")[0].style.left = "100vw";
 		document.getElementsByClassName("problem-body")[0].style.left = "100vw";
 
-		document.getElementsByClassName("bot-nav")[0].style.top = "78vh";
+		document.getElementsByClassName("bot-nav")[0].style.top = botTop+"px";
 	}, 500);	
 }
 
@@ -58,7 +60,7 @@ function overviewClick(){
 	document.getElementsByClassName("contact-body")[0].style.left = "100vw";
 	document.getElementsByClassName("problem-body")[0].style.left = "100vw";
 	
-	document.getElementsByClassName("bot-nav")[0].style.top = "78vh";
+	document.getElementsByClassName("bot-nav")[0].style.top = botTop+"px";
 
 	setTimeout(function(){
 		document.getElementsByClassName("overview-body")[0].style.left = "0vw";
@@ -68,7 +70,7 @@ function overviewClick(){
 		document.getElementsByClassName("contact-body")[0].style.left = "100vw";
 		document.getElementsByClassName("problem-body")[0].style.left = "100vw";
 
-		document.getElementsByClassName("bot-nav")[0].style.top = "78vh";
+		document.getElementsByClassName("bot-nav")[0].style.top = botTop+"px";
 	}, 500);	
 }
 
@@ -79,7 +81,7 @@ function homeClick(){
 	document.getElementsByClassName("overview-body")[0].style.left = "100vw";
 	document.getElementsByClassName("problem-body")[0].style.left = "100vw";
 	
-	document.getElementsByClassName("bot-nav")[0].style.top = "78vh";
+	document.getElementsByClassName("bot-nav")[0].style.top = botTop+"px";
 
 	setTimeout(function(){
 		document.getElementsByClassName("home-body")[0].style.left = "0vw";
@@ -89,7 +91,7 @@ function homeClick(){
 		document.getElementsByClassName("overview-body")[0].style.left = "100vw";
 		document.getElementsByClassName("problem-body")[0].style.left = "100vw";
 
-		document.getElementsByClassName("bot-nav")[0].style.top = "78vh";
+		document.getElementsByClassName("bot-nav")[0].style.top = botTop+"px";
 	}, 500);	
 }
 
@@ -100,7 +102,7 @@ function faqClick(){
 	document.getElementsByClassName("overview-body")[0].style.left = "100vw";
 	document.getElementsByClassName("problem-body")[0].style.left = "100vw";
 	
-	document.getElementsByClassName("bot-nav")[0].style.top = "78vh";
+	document.getElementsByClassName("bot-nav")[0].style.top = botTop+"px";
 
 	setTimeout(function(){
 		document.getElementsByClassName("faq-body")[0].style.left = "0vw";
@@ -110,7 +112,7 @@ function faqClick(){
 		document.getElementsByClassName("overview-body")[0].style.left = "100vw";
 		document.getElementsByClassName("problem-body")[0].style.left = "100vw";
 
-		document.getElementsByClassName("bot-nav")[0].style.top = "78vh";
+		document.getElementsByClassName("bot-nav")[0].style.top = botTop+"px";
 	}, 500);	
 }
 
@@ -206,3 +208,213 @@ document.getElementsByClassName("ham-contact")[0].addEventListener("click", func
 document.getElementsByClassName("ham-overview")[0].addEventListener("click", function(){overviewClick(); hamClose();});
 document.getElementsByClassName("ham-home")[0].addEventListener("click", function(){homeClick(); hamClose();});
 document.getElementsByClassName("ham-faq")[0].addEventListener("click", function(){faqClick(); hamClose();});
+
+
+var counter = 0;//company count
+var animationRunning = 0;
+
+var companyWrap = document.getElementsByClassName("company-wrap");//array for company-wrap class
+var companyInfo = document.getElementsByClassName("company-info");//array for company-info class
+var companyLogo = document.getElementsByClassName("company-logo");//array for company-logo class
+var companyFade = document.getElementsByClassName("company-fade");//array for company-fade class
+
+function nextCompany(){
+	if(animationRunning == 0){		
+		animationRunning = 1;
+		wrapLeft = companyWrap[counter].getBoundingClientRect().left;
+		if(counter<7){
+			counter++;
+			console.log(counter);
+
+			companyInfo[counter-1].style.transition = "transform 0.5s, opacity 0.5s";
+			companyInfo[counter-1].style.transform = "translateX(5vw)";
+			companyInfo[counter-1].style.opacity = "0";
+
+			companyLogo[counter-1].style.transition = "transform 0.5s, opacity 0.5s";
+			companyLogo[counter-1].style.transform = "translateX(5vw)";
+			companyLogo[counter-1].style.opacity = "0";
+
+
+			//companyWrap[counter].style.display = "block";
+			companyWrap[counter].style.left = wrapLeft+"px";
+			companyWrap[counter].style.transition = "transform 0.5s 0.5s, opacity 0.5s 0.5s";
+			companyInfo[counter].style.transition = "transform 0.5s 0.5s, opacity 0.5s 0.5s";
+			//companyInfo[counter].style.transform = "translateX(-5vw)";
+			companyWrap[counter].style.opacity = "1";
+			companyInfo[counter].style.opacity = "1";
+
+			companyLogo[counter].style.transition = "transform 0.5s 0.5s, opacity 0.5s 0.5s";
+			//companyLogo[counter].style.transform = "translateX(-5vw)";
+			companyLogo[counter].style.opacity = "1";
+
+			setTimeout(function(){
+				animationRunning = 0;
+				companyInfo[counter-1].style.transform = "";
+				companyLogo[counter-1].style.transform = "";
+
+				companyWrap[counter-1].style.left = "100vw";
+			}, 800);
+		}
+		else if(counter==7){
+			counter = 0;
+			console.log(counter);
+
+			companyInfo[7].style.transition = "transform 0.5s, opacity 0.5s";
+			companyInfo[7].style.transform = "translateX(5vw)";
+			companyInfo[7].style.opacity = "0";
+
+			companyLogo[7].style.transition = "transform 0.5s, opacity 0.5s";
+			companyLogo[7].style.transform = "translateX(5vw)";
+			companyLogo[7].style.opacity = "0";
+
+
+			//companyWrap[counter].style.display = "block";
+			companyWrap[counter].style.left = wrapLeft+"px";
+			companyWrap[counter].style.transition = "transform 0.5s 0.5s, opacity 0.5s 0.5s";
+			companyInfo[counter].style.transition = "transform 0.5s 0.5s, opacity 0.5s 0.5s";
+			//companyInfo[counter].style.transform = "translateX(-5vw)";
+			companyWrap[counter].style.opacity = "1";
+			companyInfo[counter].style.opacity = "1";
+
+			companyLogo[counter].style.transition = "transform 0.5s 0.5s, opacity 0.5s 0.5s";
+			//companyLogo[counter].style.transform = "translateX(-5vw)";
+			companyLogo[counter].style.opacity = "1";
+
+			setTimeout(function(){
+				animationRunning = 0;
+				companyInfo[7].style.transform = "";
+				companyLogo[7].style.transform = "";
+
+				companyWrap[7].style.left = "100vw";
+			}, 800);
+		}
+	}
+
+	else{
+		return false;
+	}	
+}
+
+function prevCompany(){
+	if(animationRunning == 0){		
+		animationRunning = 1;
+		wrapLeft = companyWrap[counter].getBoundingClientRect().left;
+		if(counter>0){
+			counter--;
+			console.log(counter);
+
+			companyInfo[counter+1].style.transition = "transform 0.5s, opacity 0.5s";
+			companyInfo[counter+1].style.transform = "translateX(5vw)";
+			companyInfo[counter+1].style.opacity = "0";
+
+			companyLogo[counter+1].style.transition = "transform 0.5s, opacity 0.5s";
+			companyLogo[counter+1].style.transform = "translateX(5vw)";
+			companyLogo[counter+1].style.opacity = "0";
+
+
+			//companyWrap[counter].style.display = "block";
+			companyWrap[counter].style.left = wrapLeft+"px";
+			companyWrap[counter].style.transition = "transform 0.5s 0.5s, opacity 0.5s 0.5s";
+			companyInfo[counter].style.transition = "transform 0.5s 0.5s, opacity 0.5s 0.5s";
+			//companyInfo[counter].style.transform = "translateX(-5vw)";
+			companyWrap[counter].style.opacity = "1";
+			companyInfo[counter].style.opacity = "1";
+
+			companyLogo[counter].style.transition = "transform 0.5s 0.5s, opacity 0.5s 0.5s";
+			//companyLogo[counter].style.transform = "translateX(-5vw)";
+			companyLogo[counter].style.opacity = "1";
+
+			setTimeout(function(){
+				animationRunning = 0;
+				companyInfo[counter+1].style.transform = "";
+				companyLogo[counter+1].style.transform = "";
+
+				companyWrap[counter+1].style.left = "100vw";
+			}, 800);
+		}
+		else if(counter==0){
+			counter = 7;
+			console.log(counter);
+
+			companyInfo[0].style.transition = "transform 0.5s, opacity 0.5s";
+			companyInfo[0].style.transform = "translateX(5vw)";
+			companyInfo[0].style.opacity = "0";
+
+			companyLogo[0].style.transition = "transform 0.5s, opacity 0.5s";
+			companyLogo[0].style.transform = "translateX(5vw)";
+			companyLogo[0].style.opacity = "0";
+
+
+			//companyWrap[counter].style.display = "block";
+			companyWrap[counter].style.left = wrapLeft+"px";
+			companyWrap[counter].style.transition = "transform 0.5s 0.5s, opacity 0.5s 0.5s";
+			companyInfo[counter].style.transition = "transform 0.5s 0.5s, opacity 0.5s 0.5s";
+			//companyInfo[counter].style.transform = "translateX(-5vw)";
+			companyWrap[counter].style.opacity = "1";
+			companyInfo[counter].style.opacity = "1";
+
+			companyLogo[counter].style.transition = "transform 0.5s 0.5s, opacity 0.5s 0.5s";
+			//companyLogo[counter].style.transform = "translateX(-5vw)";
+			companyLogo[counter].style.opacity = "1";
+
+			setTimeout(function(){
+				animationRunning = 0;
+				companyInfo[0].style.transform = "";
+				companyLogo[0].style.transform = "";
+
+				companyWrap[0].style.left = "100vw";
+			}, 800);
+		}
+	}
+
+	else{
+		return false;
+	}	
+}
+
+document.addEventListener("keydown", function(e){
+	var keyCode = e.keyCode || e.which,
+    arrow = {left: 37,right: 39};
+
+    switch(keyCode){
+    	case arrow.right: nextCompany();
+    		break;
+
+    	case arrow.left: prevCompany();
+    		break;
+    }
+});
+
+document.getElementsByClassName("problem-body")[0].addEventListener("touchstart", function(e){
+        //e.preventDefault();
+        window.scrollBy(0,100);
+		x1 = e.changedTouches[0].pageX;
+	}, false);
+
+document.getElementsByClassName("problem-body")[0].addEventListener("touchend", function(e){
+    var delta = e.changedTouches[0].pageX - x1;
+
+    console.log(delta);
+
+    //right
+    if(delta > 0) prevCompany();
+
+    //left
+    else if(delta < 0) nextCompany();
+});
+
+document.getElementsByClassName("problem-body")[0].addEventListener("DOMMouseScroll", function(e){
+	//left
+    if(e.detail > 0) nextCompany();
+
+    //right
+    else if(e.detail < 0) prevCompany();
+});
+
+document.getElementsByClassName("problem-body")[0].addEventListener("mousewheel", function(e){
+	//left
+    if(e.deltaY > 0) nextCompany();
+
+    //right
+    else if(e.deltaY < 0) prevCompany();
+});

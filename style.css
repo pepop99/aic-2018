@@ -6,8 +6,16 @@ body, html{
 
 body{
 	position:relative;
-	background: url('img/bg.png');
+	background: url('img/Artboard 1.svg');
 	background-size:cover;
+}
+
+::-webkit-scrollbar{
+	display:none;
+}
+
+::-moz-scrollbar{
+	display:none;
 }
 
 @font-face{
@@ -57,7 +65,7 @@ body{
 .home-body{
 	position:absolute;
 	top:15vh;
-	left:100vw;
+	left:0vw;
 	height:63vh;
 	width:100vw;
 	transition:left 0.3s linear;
@@ -73,28 +81,90 @@ body{
 	font-size: 5vh;
 }
 
+.c2, .c3, .c4, .c5, .c6, .c7, .c8{
+	opacity:0;
+	position:absolute;
+	left:100vw;
+	top:0;
+}
+
 .company-info{
 	position:absolute;
 	left:10vw;
 	top:7vh;
-	height: 50vh;
+	height: 60vh;
 	width: 80vw;
     background-image: linear-gradient(19deg, rgb(214, 85, 110) 0%, rgb(31, 36, 161) 100%);
-    animation: expand 1.5s forwards;
+    box-shadow: rgba(0,0,0,0.35) 10px 10px 40px;
+    overflow:scroll;
+}
+
+.company-name{
+	font-family:'tccm';
+	color:#ffffff;
+	text-align: left;
+	margin:1vh 0 0 5vw;
+	font-size:6vh;
+}
+
+.download{
+	width:55vw;
+	margin:0 0 0 13vw;
+	padding:1vh;
+	font-size: 3vh;
+	border-radius:2vw;
+	text-align: center;
+	font-family: 'tccm';
+	background: #ffffff;
+	color:#867cf4;
+	font-weight: bold;
+}
+
+.download:hover{
+	cursor:pointer;
+}
+
+.about{
+	width:55vw;
+	margin:1vh 0 0 13vw;
+	font-size: 3vh;
+	font-family: 'tccm';
+	color:#ffffff;
+	text-align: left;
 }
 
 .company-logo{
-	height: 20vh;
+	min-height: 20vh;
 	width: 60vw;
     position: absolute;
-    top:45vh;
+    top:55vh;
     left:35vw;
     background: #ffffff;
-    animation: expand 1.5s;
+    box-shadow: rgba(0,0,0,0.35) 10px 10px 40px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .company-logo img{
 	width:60vw;
+}
+
+.down-arrow{
+	position: absolute;
+	width:8vw;
+	top:33vh;
+	left:90vw;
+	transform: rotateZ(-90deg);
+}
+
+.up-arrow{
+	position: absolute;
+	width:8vw;
+	top:33vh;
+	left:2vw;
+	transform: rotateZ(90deg);
 }
 
 .title{
@@ -251,7 +321,7 @@ body{
 .register{
 	height: 100vh;
 	width: 100vw;
-	background: #7778b7;
+	background: #867cf4;
 	z-index: 5;
 	position: fixed;
 	top: 100vh;
@@ -306,9 +376,9 @@ body{
 }
 
 input[type=text], select{
-  width: 100%;
+  width: 30vw;
   padding: 1vh;
-  background: #9392c8;
+  background: #aaa0f9;
   border: 1px solid white;
 }
 
@@ -321,7 +391,9 @@ input[type=submit] {
     cursor: pointer;
 }
 
-@keyframes expand{
+
+/*@keyframes expand{
+>>>>>>> Stashed changes
 	0%{
 		transform-origin: left;
 		transform: scaleX(0);
@@ -342,10 +414,23 @@ input[type=submit] {
 	
 	100%{
 		transform-origin: right;
+		transform:scaleX(0);
 		background-position: 100px;
 		opacity: 0;
 	}
 }
+
+
+@keyframes fade{
+	0%{
+		opacity:1;
+	}
+
+	100%{
+		opacity:0;
+	}
+}*/
+
 
 
 @media all and (min-width:800px){
@@ -391,31 +476,66 @@ input[type=submit] {
 		height:65vh;
 		width:100vw;
 	}
+	
+	.problem-heading{
+		text-align: left;
+		font-size: 10vh;
+		margin:0 0 0 20vw;
+	}
 
 	.company-info{
-	height: 50vh;
-	width: 30vw;
-	position: absolute;
-	top: 30%;
-	margin-top: -5vw;
-    background-image: linear-gradient(19deg, rgb(214, 85, 110) 0%, rgb(31, 36, 161) 100%);
-    overflow: hidden;
-    right: 35vw;
-    animation: expand 1.5s forwards;
+		height: 55vh;
+		width: 44vw;
+		position: absolute;
+		top:11vh;
+		left:30vw;
+	    background-image: linear-gradient(19deg, rgb(214, 85, 110) 0%, rgb(31, 36, 161) 100%);
+	}
+		
+	.company-name{
+		margin:1vh 0 0 2vw;
+		font-size: 8vh;
+	}
+	.download{
+		width:26vw;
+		margin:1vh 0 0 6vw;
+		padding:1vh;
+		border-radius:1vw;
+	}
 
-}
+	.about{
+		width:26vw;
+		margin:2vh 0 0 6vw;
+	}
 
-.company-logo{
-	height: 50vh;
-	width: 30vw;
-    position: absolute;
-    top: 50%;
-    margin-top: -5vw;
-    background: black;
-    overflow: hidden;
-    right: 15vw;
-    animation: expand 1.5s;
-}
+	.company-logo{
+		min-height: 30vh;
+		width: 30vw;
+	    position: absolute;
+	    top:40vh;
+	    left:65vw;
+	    background: #ffffff;
+	}
+
+	.company-logo img{
+		width:20vw;
+	}
+	
+	.up-arrow{
+		position: absolute;
+		width:6vw;
+		top:3vh;
+		left:50vw;
+		transform:rotateZ(180deg);
+	}
+
+	.down-arrow{
+		position: absolute;
+		width:6vw;
+		top:68vh;
+		left:50vw;
+		transform:rotateZ(0deg);
+	}
 
 	.title{
 		margin:10vh 0 0 10vw;
@@ -440,6 +560,7 @@ input[type=submit] {
 		line-height:13.5vh;
 		font-size: 9vh;
 		display:flex;
+		flex-direction: row;
 	}
 	
 	.bot-nav span{
@@ -455,6 +576,7 @@ input[type=submit] {
 		display:block;
 		flex-grow: 2;
 		margin-right:2vw;
+		max-width: 50vw;
 	}
 
 	/*.bot-nav span{
