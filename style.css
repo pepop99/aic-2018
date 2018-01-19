@@ -18,10 +18,10 @@ body{
 	display:none;
 }
 
-/*@font-face{
+@font-face{
 	font-family: 'tccm';
 	src:url('fonts/TCCM____.TTF') format('truetype');
-}*/
+}
 
 @font-face{
 	font-family: 'bebas';
@@ -114,7 +114,7 @@ body{
 	font-size: 3vh;
 	border-radius:2vw;
 	text-align: center;
-	font-family: 'bebas';
+	font-family: 'tccm';
 	background: #ffffff;
 	color:#867cf4;
 	font-weight: bold;
@@ -128,7 +128,7 @@ body{
 	width:55vw;
 	margin:1vh 0 0 13vw;
 	font-size: 3vh;
-	font-family: 'bebas';
+	font-family: 'tccm';
 	color:#ffffff;
 	text-align: left;
 }
