@@ -399,7 +399,6 @@ document.getElementsByClassName("problem-body")[0].addEventListener("touchend", 
 });
 
 document.getElementsByClassName("problem-body")[0].addEventListener("DOMMouseScroll", function(e){
-	console.log(e);
 
 		if(e.target.classList.contains('company-info')) return false;
 
