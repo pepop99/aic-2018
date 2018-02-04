@@ -161,6 +161,27 @@ function registerClose(){
 	}
 }
 
+var companies;
+
+$.ajax({
+	type:'GET',
+	url:'http://192.168.43.173:8000/aic/problemstatements/',
+	complete:function(xhr,textstatus){
+		companies = xhr.responseJSON.problem_statements;
+
+		for(j=0;j<companies.length;j++){
+			var option = document.createElement("option");
+			option.setAttribute("value", companies[j].id);
+			option.innerHTML = companies[j].name;
+
+			document.getElementById("problem").appendChild(option);
+		}
+	},
+	error:function(xhr,textstatus,err){
+		console.log(err);
+	}
+});
+
 var membercount=0;
 function addMember(){
 	if(membercount<3){
@@ -459,36 +480,30 @@ function submitData(){
 	}
 
 	var problemSelected = document.getElementById("problem").value;
-	
+
 	var pdf;
 	var reader = new FileReader();
 	reader.onload = function(){
 		pdf = reader.result;
 		//window.log = pdf;
-		if(problemSelected == 0) alert("Select Problem Statement");
+		if(problemSelected == 0){
+			alert("Select Problem Statement");	
+		} 
+
 		else{
-			// $.ajax({
-			// 	type:'POST',
-			// 	url:"http://192.168.43.173:8000/",
-			// 	data:{
-			// 		leaderEmail:leaderMail,
-			// 		otherMails:otherMembersMail,
-			// 		probSelected:problemSelected,
-			// 		pdf:pdf
-			// 	}
-			// });
+			$.ajax({
+				type:'POST',
+				url:"http://192.168.43.173:8000/aic/register_team_non_bitsian/",
+				data:{
+					leader_email:leaderMail,
+					email_ids:otherMembersMail,
+					problem_id:problemSelected,
+					pdf:pdf
+				}
+			});
 		}
 	}
-	//reader.readAsDataURL(document.getElementById("solution").files[0]);
+	reader.readAsDataURL(document.getElementById("solution").files[0]);
 
-	$.ajax({
-		type:'GET',
-		url:'http://192.168.43.173:8000/aic/problemstatements/',
-		complete:function(xhr,textstatus){
-			console.log(textstatus);
-		},
-		error:function(xhr,textstatus,err){
-			console.log(err);
-		}
-	});
+	
 }
