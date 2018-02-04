@@ -30,7 +30,7 @@
 		
 		<div class = "home-body">
 			<div class = "title">APOGEE<br>INNOVATION CHALLENGE</div>
-			<div class = "register-button" style = "display:none;">REGISTER</div>
+			<div class = "register-button">REGISTER</div>
 		</div>
 		
 		<div class = "problem-body bodies">
@@ -214,10 +214,10 @@
 			</div>
 			<img class="register-close" src="img/cancel.png">
 		</div>
-		<div style="font-size: 5vh; color: white; position: relative; left: 10vw; font-family: sans-serif;">REGISTER</div>
+		<div style="font-size: 5vh; color: white; position: relative; left: 10vw; font-family: sans-serif;">REGISTER <span style = "font-size: 3vh;">(only one team member needs to register for the whole team)</span></div>
 		<div class="member-font">TEAM LEADER</div>
 		<div class="member-info" style="overflow-x: hidden;">
-		<div class="col-text">
+		<!-- <div class="col-text">
         <label style="color: white; font-size: 2vh; font-family: sans-serif;" for="name">Name</label>
       </div>
       <div class="col-input">
@@ -229,16 +229,16 @@
       </div>
       <div class="col-input">
         <input type="text" id="phone" name="phone">
-      </div>
+      </div> -->
 
       <div class="col-text">
         <label style="color: white; font-size: 2vh; font-family: sans-serif;" for="mail">E-mail</label>
       </div>
       <div class="col-input">
-        <input type="text" id="mail" name="mail">
+        <input type="email" id="mail" name="mail">
       </div>
 
-      <div class="col-text">
+      <!-- <div class="col-text">
         <label style="color: white; font-size: 2vh; font-family: sans-serif;" for="college">College</label>
       </div>
       <div class="col-input">
@@ -250,9 +250,9 @@
       </div>
       <div class="col-input">
         <input type="text" id="yos" name="yos">
-      </div>
+      </div> -->
 
-      <div class="member-font">MEMBERS</div>
+      <div class="member-font">MEMBERS (max 3)</div>
   </div>
       <div  class="addMember" style="padding-bottom: 2vh;">
       	<input type="submit" name="addmember" value="Add Member" style="padding: 2vh 3vw; margin-top: 3vh; font-size: 2vh; background: #514d8e">
@@ -275,17 +275,18 @@
           <option value="8">Gnomikx</option>
         </select>
       </div>
-      <!-- <div class="col-text" style="left: 0; width: 50%;">
+      <div class="col-text" style="left: 0; width: 50%;">
       	<label style="color: white; font-size: 2vh; font-family: sans-serif;" for="solution">Upload Solution</label>
       </div>
       <div>
-      	<input type="file" name="solution" value="Choose file" style="margin-top: 1vh; font-size: 1.5vh;">
-      </div> -->
+      	<input id = "solution" type="file" name="solution" value="Choose file" style="margin-top: 1vh; font-size: 1.5vh;">
+      </div>
       <div style="padding-bottom: 2vh;">
-      	<input type="submit" name="Submit" value="Submit" style="margin-left: 5vw; padding: 2vh 3vw; margin: 2vh 0 15vh 0; font-size: 2vh; background: #514d8e">
+      	<input onclick = "submitData()" type="submit" name="Submit" value="Submit" style="margin-left: 5vw; padding: 2vh 3vw; margin: 2vh 0 15vh 0; font-size: 2vh; background: #514d8e">
   </div>
 	</div>
 </div>
+	<script src = "jquery-3.2.1.min.js"></script>
 	<script src = "script.js"></script>
 </body>
 </html>

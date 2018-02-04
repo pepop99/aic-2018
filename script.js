@@ -163,53 +163,55 @@ function registerClose(){
 
 var membercount=0;
 function addMember(){
+	if(membercount<3){
 	membercount++;
 	var info = document.getElementsByClassName("member-info")[0];
 	var member = document.createElement("div");
-	var name = document.createElement("div");
-	var nameinput = document.createElement("INPUT");
-	var phone = document.createElement("div");
-	var phoneinput = document.createElement("INPUT");
+	//var name = document.createElement("div");
+	//var nameinput = document.createElement("INPUT");
+	//var phone = document.createElement("div");
+	//var phoneinput = document.createElement("INPUT");
 	var email = document.createElement("div");
-	var emailinput = document.createElement("INPUT")
-	var college = document.createElement("div");
-	var collegeinput = document.createElement("INPUT");
-	var yos = document.createElement("div");
-	var yosinput = document.createElement("INPUT");
+	var emailinput = document.createElement("INPUT");
+	emailinput.classList.add("other-members");
+	// var college = document.createElement("div");
+	// var collegeinput = document.createElement("INPUT");
+	// var yos = document.createElement("div");
+	// var yosinput = document.createElement("INPUT");
 	member.innerHTML="- Member " + membercount;
-	name.innerHTML="Name";
-	nameinput.setAttribute("type", "text");
-	phone.innerHTML="Phone";
-	phoneinput.setAttribute("type", "text");
+	//name.innerHTML="Name";
+	// nameinput.setAttribute("type", "text");
+	// phone.innerHTML="Phone";
+	// phoneinput.setAttribute("type", "text");
 	email.innerHTML="E-mail";
-	emailinput.setAttribute("type", "text");
-	college.innerHTML="College";
-	collegeinput.setAttribute("type", "text");
-	yos.innerHTML="Year of Study";
-	yosinput.setAttribute("type", "text");
+	emailinput.setAttribute("type", "email");
+	// college.innerHTML="College";
+	// collegeinput.setAttribute("type", "text");
+	// yos.innerHTML="Year of Study";
+	// yosinput.setAttribute("type", "text");
 	member.classList.add("member-font");
-	name.classList.add("col-text");
-	nameinput.classList.add("col-input");
-	phone.classList.add("col-text");
-	phoneinput.classList.add("col-input");
+	// name.classList.add("col-text");
+	// nameinput.classList.add("col-input");
+	// phone.classList.add("col-text");
+	// phoneinput.classList.add("col-input");
 	email.classList.add("col-text");
 	emailinput.classList.add("col-input");
-	college.classList.add("col-text");
-	collegeinput.classList.add("col-input");
-	yos.classList.add("col-text");
-	yosinput.classList.add("col-input");
+	// college.classList.add("col-text");
+	// collegeinput.classList.add("col-input");
+	// yos.classList.add("col-text");
+	// yosinput.classList.add("col-input");
 	info.appendChild(member);
-	info.appendChild(name);
-	info.appendChild(nameinput);
-	info.appendChild(phone);
-	info.appendChild(phoneinput);
+	// info.appendChild(name);
+	// info.appendChild(nameinput);
+	// info.appendChild(phone);
+	// info.appendChild(phoneinput);
 	info.appendChild(email);
 	info.appendChild(emailinput);
-	info.appendChild(college);
-	info.appendChild(collegeinput);
-	info.appendChild(yos);
-	info.appendChild(yosinput);
-
+	// info.appendChild(college);
+	// info.appendChild(collegeinput);
+	// info.appendChild(yos);
+	// info.appendChild(yosinput);
+}
 }
 
 document.getElementsByClassName("nav-rules")[0].addEventListener("click", rulesClick);
@@ -246,6 +248,7 @@ function nextCompany(){
 
 			companyInfo[counter-1].style.transition = "transform 0.5s, opacity 0.5s";
 			companyInfo[counter-1].style.transform = "translateX(5vw)";
+	
 			companyInfo[counter-1].style.opacity = "0";
 
 			companyLogo[counter-1].style.transition = "transform 0.5s, opacity 0.5s";
@@ -445,3 +448,47 @@ document.getElementsByClassName("problem-body")[0].addEventListener("mousewheel"
 
 document.getElementsByClassName("up-arrow")[0].addEventListener("click", nextCompany);
 document.getElementsByClassName("down-arrow")[0].addEventListener("click", prevCompany);
+
+// sending data
+function submitData(){
+	var leaderMail = document.getElementById("mail").value;
+	var otherMembersMail = [];
+
+	for(i=0;i<membercount;i++){
+		otherMembersMail[otherMembersMail.length] = document.getElementsByClassName("other-members")[i].value;
+	}
+
+	var problemSelected = document.getElementById("problem").value;
+	
+	var pdf;
+	var reader = new FileReader();
+	reader.onload = function(){
+		pdf = reader.result;
+		//window.log = pdf;
+		if(problemSelected == 0) alert("Select Problem Statement");
+		else{
+			// $.ajax({
+			// 	type:'POST',
+			// 	url:"http://192.168.43.173:8000/",
+			// 	data:{
+			// 		leaderEmail:leaderMail,
+			// 		otherMails:otherMembersMail,
+			// 		probSelected:problemSelected,
+			// 		pdf:pdf
+			// 	}
+			// });
+		}
+	}
+	//reader.readAsDataURL(document.getElementById("solution").files[0]);
+
+	$.ajax({
+		type:'GET',
+		url:'http://192.168.43.173:8000/aic/problemstatements/',
+		complete:function(xhr,textstatus){
+			console.log(textstatus);
+		},
+		error:function(xhr,textstatus,err){
+			console.log(err);
+		}
+	});
+}
