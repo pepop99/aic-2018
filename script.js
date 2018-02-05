@@ -165,7 +165,7 @@ var companies;
 
 $.ajax({
 	type:'GET',
-	url:'http://192.168.43.173:8000/aic/problemstatements/',
+	url:'http://192.168.43.14:8000/aic/problemstatements/',
 	complete:function(xhr,textstatus){
 		companies = xhr.responseJSON.problem_statements;
 
@@ -181,6 +181,13 @@ $.ajax({
 		console.log(err);
 	}
 });
+
+var isFormValid = 0;
+
+function validateEmail(email) {
+   	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+   	return re.test(String(email).toLowerCase());
+}
 
 var membercount=0;
 function addMember(){
@@ -232,6 +239,17 @@ function addMember(){
 	// info.appendChild(collegeinput);
 	// info.appendChild(yos);
 	// info.appendChild(yosinput);
+
+	emailinput.addEventListener("keyup", function(){
+		if(!validateEmail(this.value)){
+			isFormValid = 0;
+			this.classList.add('invalid-email');
+		}
+		else{
+			isFormValid = 1;
+			if(this.classList.contains('invalid-email')) this.classList.remove('invalid-email');
+		}
+	});
 }
 }
 
@@ -470,6 +488,22 @@ document.getElementsByClassName("problem-body")[0].addEventListener("mousewheel"
 document.getElementsByClassName("up-arrow")[0].addEventListener("click", nextCompany);
 document.getElementsByClassName("down-arrow")[0].addEventListener("click", prevCompany);
 
+
+document.getElementById("mail").addEventListener("keyup", function(){//validating leader's email
+	if(!validateEmail(this.value)){
+		isFormValid = 0;
+		this.classList.add('invalid-email');
+	}
+	else{
+		isFormValid = 1;
+		if(this.classList.contains('invalid-email')) this.classList.remove('invalid-email');
+	}
+});
+
+//other emails' validation code is written above where new members are being added
+
+var isFileUploaded = false;
+
 // sending data
 function submitData(){
 	var leaderMail = document.getElementById("mail").value;
@@ -479,31 +513,41 @@ function submitData(){
 		otherMembersMail[otherMembersMail.length] = document.getElementsByClassName("other-members")[i].value;
 	}
 
+	if(document.getElementById("solution").files.length == 0) isFileUploaded = false;
+	else isFileUploaded = true;
+
 	var problemSelected = document.getElementById("problem").value;
 
+	if(!isFormValid) alert("Enter valid email address");
+	else if(problemSelected == 0){
+		alert("Select Problem Statement");	
+	} 
+	else if(!isFileUploaded) alert("Upload a solution");
+	else{
 	var pdf;
 	var reader = new FileReader();
 	reader.onload = function(){
 		pdf = reader.result;
 		//window.log = pdf;
-		if(problemSelected == 0){
-			alert("Select Problem Statement");	
-		} 
-
-		else{
 			$.ajax({
 				type:'POST',
-				url:"http://192.168.43.173:8000/aic/register_team_non_bitsian/",
+				url:"http://192.168.43.14:8000/aic/register_team_non_bitsian/",
 				data:{
 					leader_email:leaderMail,
 					email_ids:otherMembersMail,
 					problem_id:problemSelected,
 					pdf:pdf
+				},
+				complete:function(xhr,textstatus){
+					console.log(xhr);
+				},
+				error:function(xhr,textstatus,err){
+					console.log(err);
 				}
 			});
 		}
-	}
 	reader.readAsDataURL(document.getElementById("solution").files[0]);
+	}
 
 	
 }

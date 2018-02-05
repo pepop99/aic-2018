@@ -326,6 +326,10 @@ body{
   left: 12vw;
 }
 
+.invalid-email{
+	background:rgba(249, 23, 0, 0.7);
+}
+
 .extras{
 	position: relative; 
 	left: 12vw;
