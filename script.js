@@ -165,7 +165,7 @@ var companies;
 
 $.ajax({
 	type:'GET',
-	url:'http://192.168.43.14:8000/aic/problemstatements/',
+	url:'https://bits-apogee.org/2018/aic/problemstatements/',
 	complete:function(xhr,textstatus){
 		companies = xhr.responseJSON.problem_statements;
 
@@ -538,7 +538,7 @@ function submitData(){
 		//window.log = pdf;
 			$.ajax({
 				type:'POST',
-				url:"http://192.168.43.14:8000/aic/register_team_non_bitsian/",
+				url:"https://bits-apogee.org/2018/aic/register_team_non_bitsian/",
 				data:{
 					leader_email:leaderMail,
 					email_ids:otherMembersMail,
