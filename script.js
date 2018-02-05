@@ -165,7 +165,7 @@ var companies;
 
 $.ajax({
 	type:'GET',
-	url:'https://bits-apogee.org/2018/aic/problemstatements/',
+	url:'http://192.168.43.14:8000/aic/problemstatements/',
 	complete:function(xhr,textstatus){
 		companies = xhr.responseJSON.problem_statements;
 
@@ -518,11 +518,18 @@ function submitData(){
 
 	var problemSelected = document.getElementById("problem").value;
 
-	if(!isFormValid) alert("Enter valid email address");
+	if(!isFormValid){
+		document.getElementById("register-message").style.display = "block";
+		document.getElementById("register-message").innerHTML = "Enter valid email address";
+	}
 	else if(problemSelected == 0){
-		alert("Select Problem Statement");	
+		document.getElementById("register-message").style.display = "block";
+		document.getElementById("register-message").innerHTML = "Select Problem Statement";	
 	} 
-	else if(!isFileUploaded) alert("Upload a solution");
+	else if(!isFileUploaded){
+		document.getElementById("register-message").style.display = "block";
+		document.getElementById("register-message").innerHTML = "Upload a Solution";
+	}
 	else{
 	var pdf;
 	var reader = new FileReader();
@@ -531,7 +538,7 @@ function submitData(){
 		//window.log = pdf;
 			$.ajax({
 				type:'POST',
-				url:"https://bits-apogee.org/2018/aic/register_team_non_bitsian/",
+				url:"http://192.168.43.14:8000/aic/register_team_non_bitsian/",
 				data:{
 					leader_email:leaderMail,
 					email_ids:otherMembersMail,
@@ -539,10 +546,12 @@ function submitData(){
 					pdf:pdf
 				},
 				complete:function(xhr,textstatus){
-					console.log(xhr);
+					document.getElementById("register-message").style.display = "block";
+					document.getElementById("register-message").innerHTML = xhr.responseJSON.message;
+					// console.log(xhr.responseJSON.message);
 				},
 				error:function(xhr,textstatus,err){
-					console.log(err);
+					// console.log(err);
 				}
 			});
 		}
