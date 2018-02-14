@@ -509,6 +509,7 @@ var isFileUploaded = false;
 // sending data
 function submitData(){
 	var leaderMail = document.getElementById("mail").value;
+	var submitBtn = document.getElementById("submitBtn");
 	var otherMembersMail = [];
 
 	for(i=0;i<membercount;i++){
