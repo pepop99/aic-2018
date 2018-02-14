@@ -333,6 +333,7 @@ body{
 .extras{
 	position: relative; 
 	left: 12vw;
+	padding-bottom:10vh;
 }
 
 .addMember{
@@ -367,7 +368,8 @@ input[type=submit] {
 
 #register-message{
 	/*border:solid 2px #5950c7;*/
-	position:relative;
+	position:absolute;
+	top:8.5vh;
 	width: 92vw;
 	left: 2vw;
 	text-align: center;
@@ -541,6 +543,7 @@ input[type=submit] {
 		position: absolute; 
 		top: 34vh; 
 		left: 56vw;
+		padding-bottom: 0;
 	}
 
 	.col-text {
@@ -566,6 +569,7 @@ input[type=text], select{
 }
 
 #register-message{
+	position:relative;
 	top:15vh;
 }
 }
