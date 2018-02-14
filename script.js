@@ -1,3 +1,5 @@
+var baseurl = '192.168.43.190:8000';
+
 function hamClose(){
 	document.getElementsByClassName("hamburger")[0].style.left = "-110vw";
 }
@@ -165,7 +167,7 @@ var companies;
 
 $.ajax({
 	type:'GET',
-	url:'https://bits-apogee.org/2018/aic/problemstatements/',
+	url:'http://'+baseurl+'/aic/problemstatements/',
 	complete:function(xhr,textstatus){
 		companies = xhr.responseJSON.problem_statements;
 
@@ -538,17 +540,19 @@ function submitData(){
 		//window.log = pdf;
 			$.ajax({
 				type:'POST',
-				url:"https://bits-apogee.org/2018/aic/register_team_non_bitsian/",
+				url:'http://'+baseurl+'/aic/register_team_non_bitsian/',
 				data:{
 					leader_email:leaderMail,
 					email_ids:otherMembersMail,
 					problem_id:problemSelected,
-					pdf:pdf
+					pdf:pdf,
+					filename:document.getElementById("solution").files[0].name
 				},
 				complete:function(xhr,textstatus){
 					document.getElementById("register-message").style.display = "block";
 					document.getElementById("register-message").innerHTML = xhr.responseJSON.message;
 					// console.log(xhr.responseJSON.message);
+
 				},
 				error:function(xhr,textstatus,err){
 					// console.log(err);
