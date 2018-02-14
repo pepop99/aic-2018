@@ -533,6 +533,12 @@ function submitData(){
 		document.getElementById("register-message").innerHTML = "Upload a Solution";
 	}
 	else{
+
+	// disable submit button
+	submitBtn.disabled=true;
+	submitBtn.style.opacity=0.5;
+	submitBtn.style.cursor="not-allowed";
+
 	var pdf;
 	var reader = new FileReader();
 	reader.onload = function(){
@@ -557,6 +563,14 @@ function submitData(){
 				error:function(xhr,textstatus,err){
 					// console.log(err);
 				}
+			}).done(function(response){
+				// disable submit button
+				submitBtn.disabled=false;
+				submitBtn.style.opacity=1;
+				submitBtn.style.cursor="pointer";
+
+				document.getElementById("register-message").style.display = "block";
+				document.getElementById("register-message").innerHTML = response.message;
 			});
 		}
 	reader.readAsDataURL(document.getElementById("solution").files[0]);
